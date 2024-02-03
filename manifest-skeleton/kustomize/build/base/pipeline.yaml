@@ -17,8 +17,6 @@ spec:
   - name: basic-auth
     description: .git-credentials file for git-cli Task
   params:
-  - name: target-path
-    type: string 
   #- name: imageurl
   #  type: string
   #  description: Target container registry URL
@@ -90,7 +88,7 @@ spec:
       workspace: shared-workspace
     params:
     - name: PATH_CONTEXT
-      value: $(workspaces.source.path)/$(params.target-path)
+      value: $(workspaces.source.path)
     - name: IMAGE
       value: image-registry.openshift-image-registry.svc:5000/${{ values.app_name }}-develop/${{ values.app_name }}-record:$(params.git-revision)
 

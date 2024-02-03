@@ -25,8 +25,6 @@ spec:
         pipelineRef:
           name: ${{ values.app_name }}-pipeline
         params:
-          - name: target-path
-            value: 'site'
           - name: git-url
             value: $(tt.params.git-app-url)
           - name: git-revision
