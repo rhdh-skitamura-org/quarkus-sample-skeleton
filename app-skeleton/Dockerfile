@@ -27,7 +27,7 @@ USER 1001
 # Install production dependencies
 RUN npm ci
 
-ENV PORT ${{ values.port }}
-EXPOSE ${{ values.port }}
+ENV PORT 3000 
+EXPOSE 3000 
 
 CMD ["npm", "run", "start"]
