@@ -16,6 +16,7 @@ spec:
     description: Temporary dir for git-cli Task
   - name: basic-auth
     description: .git-credentials file for git-cli Task
+  - name: maven-settings
   params:
   #- name: imageurl
   #  type: string
