@@ -87,6 +87,9 @@ spec:
           owner: ${{ parameters.owner }}
           system: ${{ parameters.system }}
           description: ${{ parameters.description }}
+          group_id: redhat.janus
+          artifact_id: quarkus-app
+          java_package_name: org.redhat.janus
         targetPath: ./tenant-app
 
     - id: publish-app-to-github

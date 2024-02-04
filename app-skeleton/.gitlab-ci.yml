@@ -27,7 +27,7 @@ build-job:
   variables:
     ENTITY_NAMESPACE: 'default'
     ENTITY_KIND: 'Component'
-    ENTITY_NAME: ${{ values.component_id }}
+    ENTITY_NAME: ${{ values.app_name }}
   image: quay.io/redhat-gpte/techdocs-cli
   stage: build
   script:

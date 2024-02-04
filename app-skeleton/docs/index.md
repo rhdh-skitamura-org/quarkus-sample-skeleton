@@ -1,3 +1,3 @@
-# ${{values.component_id}} Documentation
+# ${{values.app_name}} Documentation
 
 ${{values.description}}
