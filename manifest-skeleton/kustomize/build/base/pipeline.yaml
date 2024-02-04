@@ -62,12 +62,24 @@ spec:
     - name: output
       workspace: manifest-workspace
 
+  - name: package
+    taskRef:
+      kind: ClusterTask
+      name: maven
+    runAfter:
+    - git-clone-${{ values.app_name }}
+    - git-clone-${{ values.app_name }}-manifests
+    workspaces:
+      - name: source
+        workspace: shared-workspace
+      - name: maven-settings
+        workspace: maven-settings
+
   - name: scan-app
     taskRef:
       name: sonarqube-scanner
     runAfter:
-    - git-clone-${{ values.app_name }}
-    - git-clone-${{ values.app_name }}-manifests
+    - package 
     params:
     - name: SONAR_HOST_URL
       value: 'http://sonarqube-sonarqube.sonarqube.svc:9000'
@@ -137,6 +149,8 @@ spec:
       workspace: temp-dir
     - name: basic-auth
       workspace: basic-auth
+    - name: maven-settings
+      workspace: maven-settings
     params:
     - name: GIT_USER_NAME
       value: $(params.git-manifests-username)

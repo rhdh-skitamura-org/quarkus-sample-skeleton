@@ -47,6 +47,8 @@ spec:
               claimName: ${{ values.app_name }}-manifest-workspace
           - name: vul-cache
             emptyDir: {}
+          - name: maven-settings
+            emptyDir: {}
           - name: sonar-settings
             secret:
               secretName: sonar-settings
