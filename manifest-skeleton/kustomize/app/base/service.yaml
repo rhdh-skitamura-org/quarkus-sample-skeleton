@@ -9,7 +9,7 @@ spec:
   - name: 8080-tcp
     port: 8080
     protocol: TCP
-    targetPort: 3000
+    targetPort: 8080
   selector:
     app: ${{ values.app_name }}
   type: ClusterIP

@@ -79,7 +79,7 @@ spec:
 
   - name: build-container
     taskRef:
-      name: s2i-nodejs
+      name: s2i-java
       kind: ClusterTask
     runAfter:
     - scan-app

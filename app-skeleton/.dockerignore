@@ -1,5 +1,5 @@
-node_modules
-npm-debug.log
-README.md
-.git
-.env.local
+*
+!target/*-runner
+!target/*-runner.jar
+!target/lib/*
+!target/quarkus-app/*
