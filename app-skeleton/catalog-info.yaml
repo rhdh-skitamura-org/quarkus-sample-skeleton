@@ -10,6 +10,7 @@ metadata:
     tektonci/build-namespace: ${{ values.app_name }}-develop
     backstage.io/kubernetes-id: ${{ values.app_name }}
     janus-idp.io/tekton-enabled : 'true'
+    backstage.io/techdocs-ref: dir:.
     janus-idp.io/tekton : ${{ values.app_name }}
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: ${{ values.git_owner_name }}/${{ values.app_name }}-app
